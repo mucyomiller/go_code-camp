@@ -25,5 +25,6 @@ func main() {
 
 func titlecase(s string) string {
 	s = strings.ToLower(s)
-	return strings.Title(s)
+	// TODO: write custom map to title case the string
+	return strings.Title(s) // BUG: Title mishandles punctuation
 }
