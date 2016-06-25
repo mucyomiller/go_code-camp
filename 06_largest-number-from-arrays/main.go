@@ -2,9 +2,9 @@
 	Basic Algorithms
 	06 Return Largest Numbers in Arrays
 
-	Program takes any number of arrays and
-	returns a new array with each of the
-	largest numbers found in any given array.
+	Program takes any number of arrays or slices and
+	returns a new slice with each of the
+	largest numbers found in ALL provided arrays.
 
 	Written by: robjloranger
 */
@@ -23,26 +23,25 @@ func main() {
 	fmt.Println(largest(array1, array2, array1))
 }
 
-// function to return array of largest numbers
+// function to return slice of largest numbers
+// variadic input, output slice of int
 func largest(arrays ...[]int) []int {
-	// variadic input
 	// create empty array length of input
 	output := make([]int, len(arrays))
 	// loop over input
-	for arr := range arrays {
+	for i, arr := range arrays {
 		// new empty highest number
 		var highest int
-		// loop over this array of numbers
-		// BUG: Error, invalid input for len.
-		// arr type int.. what?
+		// loop over current array/slice of numbers
 		for x := 0; x < len(arr)-1; x++ {
 			// keep highest up to date
-			if x > highest {
-				highest = x
+			if arr[x] > highest {
+				highest = arr[x]
 			}
 		}
-		// add highest to array
+		// add highest to ouput
+		output[i] = highest
 	}
-	// return new array
+	// return output
 	return output
 }
