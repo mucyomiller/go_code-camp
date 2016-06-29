@@ -24,6 +24,8 @@ func main() {
 	fmt.Printf("Sum of range 6 - 1 = %v\n", sumrange(6, 1))
 	fmt.Printf("Sum of range 4 - 8 = %v\n", sumrange(4, 8))
 	fmt.Printf("Sum of range 0 - 26 = %v\n", sumrange(0, 26))
+	// it even works with negative ranges
+	fmt.Printf("Sum of range -8 - 2 = %v\n", sumrange(-8, 2))
 }
 
 // function to sum numbers within a range
