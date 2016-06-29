@@ -4,7 +4,7 @@
 
 	This program returns a string composed of
 	the string(1st input) repeated x(2nd input) times.
-	Returning an empty string is x was not positive.
+	Returning an empty string if x is not positive.
 
 	Written by: robjloranger
 */

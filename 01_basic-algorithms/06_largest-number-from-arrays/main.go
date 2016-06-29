@@ -2,7 +2,7 @@
 	Basic Algorithms
 	06 Return Largest Numbers in Arrays
 
-	Program takes any number of arrays or slices and
+	Program takes any number of arrays and
 	returns a new slice with each of the
 	largest numbers found in ALL provided arrays.
 
